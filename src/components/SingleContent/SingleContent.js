@@ -4,8 +4,8 @@ import { img_300, unavailable } from '../config/config';
 import './SingleContent.css';
 
 const SingleContent =({
-    key,
-    id, 
+/*     key,
+    id,  */
     poster,
     title, 
     date,
