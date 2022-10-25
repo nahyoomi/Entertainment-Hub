@@ -4,8 +4,8 @@
 
 .app {
     min-height: 100vh;
-    background-color: #39445a;
-    color: white;
+    background-color:  var(--color-bg-primary);
+    color: var(--color-text-primary);
     padding-top: 130px;
     padding-bottom: 70px;
 }

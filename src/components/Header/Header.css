@@ -5,13 +5,21 @@
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    background-color: #39445a;
+    background-color: var(--color-bg-primary);
     font-family: "Montserrat", sans-serif;
     font-size: 5vw;
     padding-bottom: 15px;
     box-shadow: 0px 1px 5px black;
-    color: white;
+    color: var(--color-text-primary);
     z-index: 100;
+}
+
+.themeBtn {
+  padding: 10px;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 1px solid var(--color-text-primary);
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
