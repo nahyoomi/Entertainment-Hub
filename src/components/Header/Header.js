@@ -6,14 +6,12 @@ function Header() {
 
 
   return (
-    <>
-        <span className='header'>
-          🎥 Entertainment Hub 🎬
-          <ThemeButton />
-        </span>
-        
-    </>
 
+    <span 
+    onClick={() => window.scroll(0, 0)} className='header'>
+      🎥 Entertainment Hub 🎬
+      <ThemeButton />
+    </span>
   )
 }
 
