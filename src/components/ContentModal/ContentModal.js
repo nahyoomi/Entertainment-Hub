@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import './ContentModal.css';
 import { img_500, unavailable, unavailableLandscape } from '../config/config';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Carousel from './Carousel/Carousel';
 
 const style = {
   position: 'absolute',
@@ -51,8 +52,8 @@ export default function ContentModal({ children, media_type, id }) {
   useEffect(() => {
     fetchData();
     fetchVideo();
-
-  }, []);
+    // eslint-disable-next-line
+  },[]);
 
   return (
     <>
@@ -92,7 +93,7 @@ export default function ContentModal({ children, media_type, id }) {
                   src={
                     content.backdrop_path
                     ? `${img_500}/${content.backdrop_path}` 
-                    : unavailable
+                    : unavailableLandscape
                   } 
                   alt={content.name || content.title}
                   className='ContentModal__landscape'
@@ -113,7 +114,9 @@ export default function ContentModal({ children, media_type, id }) {
                   <span className='ContentModal__description'>
                     {content.overview}
                   </span>
-                  <div></div>
+                  <div>
+                    <Carousel media_type={media_type} id={id} />
+                  </div>
                   <Button
                     variant='contained'
                     startIcon={<YouTubeIcon/>}
